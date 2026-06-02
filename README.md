@@ -26,9 +26,9 @@ document edition. It gathers:
 
 - `index.html`: page structure and workbench sections
 - `styles.css`: responsive visual system
-- `app.js`: source data, filters, rendering, gap board, and CSV exports
+- `app.js`: source data, filters, rendering, gap board, and source-lead/record/statement/person CSV exports
 - `chronology-export.js`: first-section document chronology and triage CSV exports
-- `library-pull-export.js`: Clinton Library OA/ID pull-sheet, onsite agenda, Daily Diary controls, compiler runbook, source-note audit, source-note template, verification queue, request-packet, and request-batch CSV exports
+- `library-pull-export.js`: Clinton Library OA/ID pull-sheet, onsite agenda, Daily Diary controls, compiler runbook, source-note audit, source-note template, verification queue, request-packet, request-batch, and correspondence-draft CSV exports
 - `assets/foundations-source-map.svg`: source map visual
 - `reports/compiler-gap-analysis.md`: source-gap treatment report
 
@@ -65,9 +65,13 @@ into a source-note readiness worklist, and
 `clinton-foundations-request-packets.csv`, which turns those tasks into
 repository-facing ask text and capture fields. The companion
 `clinton-foundations-request-batches.csv` groups those rows by repository and
-request type for handoff planning. Use these worksheets for checking which
-leads are still locators and which have enough item-level evidence for final
-FRUS source-note treatment.
+request type for handoff planning, and
+`clinton-foundations-correspondence-drafts.csv` turns those grouped batches
+into ready-to-edit subject lines, recipient hints, ask text, identifiers,
+capture fields, source-note targets, and URLs. Use these worksheets for
+checking which leads are still locators, which have enough item-level evidence
+for final FRUS source-note treatment, and which are ready for reading-room or
+remote-reference outreach.
 
 ## Presidential Daily Diary Search
 
@@ -82,6 +86,11 @@ Papers text before it can support final document selection. The section exports
 `clinton-foundations-daily-diary-controls.csv` with one row per call, meeting,
 briefing, summit-prep, or public-event entry, preserving the NAID, file-unit
 title, follow-up target, and promotion rule.
+
+The Source Leads section exports `clinton-foundations-source-leads.csv`,
+respecting the active search, period, and institution filters. Use it to turn
+the page's broad source universe into repository-specific scout lists before
+writing request packets.
 
 ## Primary Anchors
 
@@ -116,11 +125,12 @@ for reading-room pull sheets or source-note reconciliation. The companion
 a promotion worksheet with evidence roles, pairing requirements, source-note
 actions, and volume-boundary cautions.
 
-The source-note audit, verification queue, request-packet export, and grouped
-request batches are the second reconciliation layer: they keep the working
-source-note target, verification need, next pull, repository ask, and capture
-fields in one row for each evidence group, then sort and group the tasks so
-archival pulls do not lose their FRUS-style citation requirements.
+The source-note audit, verification queue, request-packet export, grouped
+request batches, and correspondence drafts are the second reconciliation layer:
+they keep the working source-note target, verification need, next pull,
+repository ask, capture fields, and outreach text together for each evidence
+group, then sort and group the tasks so archival pulls do not lose their
+FRUS-style citation requirements.
 
 The Research Ingest Checklist also exports
 `clinton-foundations-compiler-runbook.csv`, a manifest that sequences every
