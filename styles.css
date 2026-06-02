@@ -267,12 +267,13 @@ dd {
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(10, minmax(0, 1fr));
   gap: 14px;
   margin: 0 0 42px;
 }
 
 .stats div {
+  min-width: 0;
   min-height: 122px;
   padding: 18px;
   background: var(--panel);
@@ -293,6 +294,7 @@ dd {
   margin-bottom: 0;
   color: var(--muted);
   font-weight: 800;
+  overflow-wrap: anywhere;
 }
 
 .section {
